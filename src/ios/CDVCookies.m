@@ -32,7 +32,8 @@
     NSHTTPCookie *cookie;
     NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     for (cookie in [storage cookies]) {
-        [storage deleteCookie:cookie];
+        /*[storage deleteCookie:cookie];*/
+        NSLog(@"%@", cookie);
     }
     [[NSUserDefaults standardUserDefaults] synchronize];
     
